@@ -21,6 +21,10 @@
       const urlParams = new URLSearchParams(window.location.search);
       const room = urlParams.get("room");
 
+      if (room) {
+        socket.emit("join room", room);
+      }
+
       form.addEventListener('submit', function (e) {
         e.preventDefault();
       

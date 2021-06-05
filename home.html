@@ -28,7 +28,7 @@
           alert("This input can't be empty")
           return;
         }
-        socket.emit("join room", roomInput.value);
+        
         params = `room=${roomInput.value}`
         window.location.replace(`${url}/?${params}`)
     })
